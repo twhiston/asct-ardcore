@@ -1,0 +1,37 @@
+Analytic Geometry (ardcore sequencer) notes:
+
+
+what works:
+
+plays back from grid according to sequencer position on clock input
+
+returns right values and outputs at dac
+
+
+order to do things:
+
+gates and trigger outs - both triggers DONE
+
+cv record - DONE
+
+when a2 and a3 are at 0 play through the sequence straight otherwise use co-ordinates
+
+
+morphing idea
+
+Ideas:
+
+
+investigate difference that a2 and a3 knobs have on vals coming in
+
+if there is no cv input it should do something itself maybe even have the option to use cv inputs to morph preset patterns 
+
+record cv steps in - cv records on clock pulse in to 64 values in matrix
+
+logic to how this could work. if knob 1 and 2 are at 0 then record
+
+anything more than 2 do pattern morph stuff 
+
+attach patterns as external file for ease of use
+
+digital outs should do gate on start of gate and trigger on end
