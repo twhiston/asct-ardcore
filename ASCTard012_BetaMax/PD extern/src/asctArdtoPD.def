@@ -1,0 +1,2 @@
+LIBRARY asctArdtoPD
+EXPORTS asctArdtoPD_setup

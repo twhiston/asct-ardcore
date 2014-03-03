@@ -1,0 +1,1 @@
+The only difference between the vanilla and extended is the file extension!

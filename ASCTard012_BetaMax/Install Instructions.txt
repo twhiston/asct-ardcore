@@ -1,0 +1,17 @@
+ASCTard012 - BetaMax
+
+Better Max (and PD) integration. 
+I wanted a way to use the ardcore with Max more easily and i came up with this
+This sketch consists of both an ardcore sketch and an extern for Max or PD
+
+Install Instructions:
+
+
+1) Move the Max/Msp or PD external into your search path. You will need to choose the correct extern dependant on your software, platform and 32/64 bit OS. I've provided exeternals for as many options as possible, so hopefully it'll work for you
+		If you dont know how to do this try reading this thread http://cycling74.com/forums/topic/stupid-question-where-to-install-external-objects-for-max5/
+
+2) Upload the sketch to your ardcore
+
+3) open the example max/pd patch (ard2max.maxpat/ard2PD.pd)
+
+Once the extern is visible to your software you should be able to open the example patch and it will all become clear.

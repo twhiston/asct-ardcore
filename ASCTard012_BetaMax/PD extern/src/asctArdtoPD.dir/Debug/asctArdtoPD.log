@@ -1,0 +1,19 @@
+﻿Build started 04/03/2014 00:15:29.
+     1>Project "C:\Users\Ascetic\Desktop\ard2max\PD extern\asctArd2PD\visual_studio\asctArdtoPD.vcxproj" on node 2 (Build target(s)).
+     1>ClCompile:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\CL.exe /c /I"C:\Program Files (x86)\pd\include" /Zi /nologo /W3 /WX- /Od /Ob0 /Oy- /D WIN32 /D _WINDOWS /D _DEBUG /D MSW /D "CMAKE_INTDIR=\"Debug\"" /D asctArdtoPD_EXPORTS /D _WINDLL /D _MBCS /Gm- /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"asctArdtoPD.dir\Debug\\" /Fd"asctArdtoPD.dir\Debug\vc110.pdb" /Gd /TC /analyze- /errorReport:prompt asctArdtoPD.c
+         asctArdtoPD.c
+     1>asctArdtoPD.c(116): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : see declaration of 'sprintf'
+     1>asctArdtoPD.c(157): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : see declaration of 'sprintf'
+     1>asctArdtoPD.c(160): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\include\stdio.h(357) : see declaration of 'sprintf'
+       Link:
+         C:\Program Files (x86)\Microsoft Visual Studio 11.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Ascetic\Desktop\ard2max\PD extern\asctArd2PD\visual_studio\Debug\asctArdtoPD.dll" /INCREMENTAL /NOLOGO /LIBPATH:"C:/Program Files (x86)/pd/bin" /LIBPATH:"C:/Program Files (x86)/pd/bin/Debug" kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib pd.lib /DEF:"C:/Users/Ascetic/Desktop/ard2max/PD extern/asctArd2PD/visual_studio/asctArdtoPD.def" /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/Ascetic/Desktop/ard2max/PD extern/asctArd2PD/visual_studio/Debug/asctArdtoPD.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/Ascetic/Desktop/ard2max/PD extern/asctArd2PD/visual_studio/Debug/asctArdtoPD.lib" /MACHINE:X86 /SAFESEH  /machine:X86 /debug /DLL asctArdtoPD.dir\Debug\asctArdtoPD.obj
+     1>LINK : fatal error LNK1104: cannot open file 'pd.lib'
+     1>Done Building Project "C:\Users\Ascetic\Desktop\ard2max\PD extern\asctArd2PD\visual_studio\asctArdtoPD.vcxproj" (Build target(s)) -- FAILED.
+
+Build FAILED.
+
+Time Elapsed 00:00:00.20

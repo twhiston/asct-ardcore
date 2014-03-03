@@ -1,0 +1,38 @@
+#N canvas 676 324 863 711 10;
+#X obj 195 110 asctArdtoPD;
+#X floatatom 226 82 5 0 0 0 - - -;
+#X obj 258 136 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X floatatom 249 156 5 0 0 0 - - -;
+#X floatatom 240 177 5 0 0 0 - - -;
+#X floatatom 231 197 5 0 0 0 - - -;
+#X floatatom 222 218 5 0 0 0 - - -;
+#X floatatom 213 241 5 0 0 0 - - -;
+#X floatatom 204 264 5 0 0 0 - - -;
+#X msg 127 45 ports;
+#X msg 72 45 open 2;
+#X obj 72 83 comport 2 115200;
+#X text 217 64 To Dac;
+#X text 352 80 This is how you do digi outs.;
+#X msg 273 83 1 \$1;
+#X obj 273 55 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 313 54 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X msg 313 82 9 \$1;
+#X connect 0 0 11 0;
+#X connect 0 1 8 0;
+#X connect 0 2 7 0;
+#X connect 0 3 6 0;
+#X connect 0 4 5 0;
+#X connect 0 5 4 0;
+#X connect 0 6 3 0;
+#X connect 0 7 2 0;
+#X connect 1 0 0 1;
+#X connect 9 0 11 0;
+#X connect 10 0 11 0;
+#X connect 11 0 0 0;
+#X connect 14 0 0 2;
+#X connect 15 0 14 0;
+#X connect 16 0 17 0;
+#X connect 17 0 0 2;

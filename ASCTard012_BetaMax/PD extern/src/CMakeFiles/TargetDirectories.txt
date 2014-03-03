@@ -1,0 +1,3 @@
+C:/Users/Ascetic/Desktop/ard2max/PD extern/asctArd2PD/visual_studio/CMakeFiles/ALL_BUILD.dir
+C:/Users/Ascetic/Desktop/ard2max/PD extern/asctArd2PD/visual_studio/CMakeFiles/ZERO_CHECK.dir
+C:/Users/Ascetic/Desktop/ard2max/PD extern/asctArd2PD/visual_studio/CMakeFiles/asctArdtoPD.dir

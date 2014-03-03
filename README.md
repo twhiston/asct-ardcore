@@ -48,6 +48,10 @@ ASCT-Ardcore
 
     Noise generator with audio rate and lfo flavours, audio rate is capable of some eerie sounds when you turn up the smooth and the lfo rate produces some very nice trigger patterns if you have an ardcore expander (though its still very good for modulation out of the dac if you dont!)
 
+#ASCTard012- BetaMax
+
+    Better Max/Msp (and PD) integration with the ardcore, includes a sketch and extern objects for Max and PD for both OSX and Windows (32 and 64 bit). This is, i hope the fastest and easiest way to get the ardcore and your software talking
+
 ## Thanks:
 
 #Darwin Grosse
