@@ -44,6 +44,10 @@ ASCT-Ardcore
 
     Advanced ardcore pattern sequenced, see included manual
 
+#ASCTard011- Dead City Radio
+
+    Noise generator with audio rate and lfo flavours, audio rate is capable of some eerie sounds when you turn up the smooth and the lfo rate produces some very nice trigger patterns if you have an ardcore expander (though its still very good for modulation out of the dac if you dont!)
+
 ## Thanks:
 
 #Darwin Grosse
