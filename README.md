@@ -36,7 +36,7 @@ ASCT-Ardcore
 
      Remembers the last cv in, dO1 on change ,d02 on same
 
-#ASCTard009- Changnesia
+#ASCTard009- Phase Patterns
 
     Just a bit of fun to test timed actions, infinite steve reich, uses the intervals from phase patterns which is outputs at the DAC and phased triggers on d0 & d2
 
