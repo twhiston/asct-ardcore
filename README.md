@@ -52,6 +52,10 @@ ASCT-Ardcore
 
     Better Max/Msp (and PD) integration with the ardcore, includes a sketch and extern objects for Max and PD for both OSX and Windows (32 and 64 bit). This is, i hope the fastest and easiest way to get the ardcore and your software talking
 
+#ASCTard013- Midi2Gates
+	
+	Takes a midi in via midi to minijack cable and outputs gates from the expander outputs, also has a clock divider and output for start/stop/continue messages
+
 ## Thanks:
 
 #Darwin Grosse
