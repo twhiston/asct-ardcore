@@ -4,7 +4,7 @@ ASCTard001 - Analytic Geometry
 Analytic Geometry records and plays back 64 steps of CV. The step played back from the pattern recorded is determined by the inputs of a2 and a3.
 
 Our 64 values are referenced as a grid where each of the blank spaces holds a value
-
+```
   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 7 x   x   x   x   x   x   x   x   x
   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
@@ -23,8 +23,7 @@ Our 64 values are referenced as a grid where each of the blank spaces holds a va
 0 x   x   x   x   x   x   x   x   x
   xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
     0   1   2   3   4   5   6   7
-
-(note: the above looks totally screwed in markdown, look at it in a text editor)
+```
 
 when the program gets a gate high in it looks at the current inputs of a2 and a3 and uses them to determine the x/y position that it should play.
 
