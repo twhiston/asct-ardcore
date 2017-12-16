@@ -20,48 +20,9 @@ boolean buffFlag = false;
 float noizLevel = 1.0;
 
 
-void setup()
-{
-  Serial.begin(9600);
-  DDRD = DDRD | B11111000;
-  DDRB = B111111;
-  PORTD = B00000000;
-  PORTB = B000000;
-  whitenoise(noizBuffer,bufferSize, 1.0); //generate the first noise buffer
-  interruptSetup();
-}
-
 int interp;
 
-void loop()
-{
-  //our pitch vals
-  static unsigned long pitchL;
-  static int pitchF;
-  
-  if(buffFlag == true){
-    whitenoise(noizBuffer,bufferSize, noizLevel);
-    buffFlag == false;
-  }
-  
-  noizLevel = analogRead(0)/1024.0;
-  //theres a bit of a balancing act stopping these values increasing to the point where it freezes the ardcore
-  //sorry for the magic numbers!
-  pitchL = (8184 - (analogRead(1)<<3) + 527);
-  pitchF = (256 - (analogRead(2)>>2) -512);
-  long pitchcalc = (pitchL + pitchF)*2;
-  pitchcalc = (pitchcalc < 20)? 20: pitchcalc;
-  OCR1A = pitchcalc;
-  
-  interp = analogRead(3)>>8;
-  
-  //we need to write an interp function, maybe it can store a current position, work out the values around it for the required routine and then do them
-  //for example if its set to 4 it gets the current index then calculates the next 2 index's and the previous 2
-  //then add them all together divide by 5 and do the normal scaling before  output
-  
-  
-  
-}
+
 
  ISR(TIMER1_COMPA_vect) {
    
@@ -171,4 +132,45 @@ void dacOutput(byte v)
 {
   PORTB = (PORTB & B11100000) | (v >> 3);
   PORTD = (PORTD & B00011111) | ((v & B00000111) << 5);
+}
+
+void setup()
+{
+  Serial.begin(9600);
+  DDRD = DDRD | B11111000;
+  DDRB = B111111;
+  PORTD = B00000000;
+  PORTB = B000000;
+  whitenoise(noizBuffer,bufferSize, 1.0); //generate the first noise buffer
+  interruptSetup();
+}
+
+void loop()
+{
+  //our pitch vals
+  static unsigned long pitchL;
+  static int pitchF;
+  
+  if(buffFlag == true){
+    whitenoise(noizBuffer,bufferSize, noizLevel);
+    buffFlag == false;
+  }
+  
+  noizLevel = analogRead(0)/1024.0;
+  //theres a bit of a balancing act stopping these values increasing to the point where it freezes the ardcore
+  //sorry for the magic numbers!
+  pitchL = (8184 - (analogRead(1)<<3) + 527);
+  pitchF = (256 - (analogRead(2)>>2) -512);
+  long pitchcalc = (pitchL + pitchF)*2;
+  pitchcalc = (pitchcalc < 20)? 20: pitchcalc;
+  OCR1A = pitchcalc;
+  
+  interp = analogRead(3)>>8;
+  
+  //we need to write an interp function, maybe it can store a current position, work out the values around it for the required routine and then do them
+  //for example if its set to 4 it gets the current index then calculates the next 2 index's and the previous 2
+  //then add them all together divide by 5 and do the normal scaling before  output
+  
+  
+  
 }

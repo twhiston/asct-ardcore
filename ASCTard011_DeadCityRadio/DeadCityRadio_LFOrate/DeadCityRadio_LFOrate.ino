@@ -21,49 +21,7 @@ boolean buffFlag = false;
 float noizLevel = 1.0;
 
 #define SPEEDMULTCOUNT 2
-
-
-void setup()
-{
-  Serial.begin(9600);
-  DDRD = DDRD | B11111000;
-  DDRB = B111111;
-  PORTD = B00000000;
-  PORTB = B000000;
-  whitenoise(noizBuffer,bufferSize, 1.0); //generate the first noise buffer
-}
-
 int interp;
-
-void loop()
-{
-  //our pitch vals
-  static unsigned long pitchL;
-  static int pitchF;
-  static unsigned long speedcalc;
-  static unsigned long speedcount;
-  static unsigned long speedmult;
-  if(buffFlag == true){
-    whitenoise(noizBuffer,bufferSize, noizLevel);
-    buffFlag == false;
-  }
-  
-  noizLevel = analogRead(0)/1024.0;
-  //these ranges need improving
-  pitchL = (16384-(analogRead(1)<<4))+32;
-  pitchF = ((64 -(analogRead(2)>>4)) - 32);
-  speedcalc = (pitchL + pitchF);
-
-  interp = analogRead(3)>>8;
-
-
-  if(speedcount >= speedcalc){
-     speedcount = doOutput(speedcalc);
-    }else {
-      speedcount++;
-    }
-
-}
 
 int doOutput(unsigned long speedcal)
 {
@@ -157,5 +115,45 @@ void whitenoise(
     g_x2 += g_x1;
     *_fpDstBuffer++;
   }
+}
+
+void setup()
+{
+  Serial.begin(9600);
+  DDRD = DDRD | B11111000;
+  DDRB = B111111;
+  PORTD = B00000000;
+  PORTB = B000000;
+  whitenoise(noizBuffer,bufferSize, 1.0); //generate the first noise buffer
+}
+
+void loop()
+{
+  //our pitch vals
+  static unsigned long pitchL;
+  static int pitchF;
+  static unsigned long speedcalc;
+  static unsigned long speedcount;
+  static unsigned long speedmult;
+  if(buffFlag == true){
+    whitenoise(noizBuffer,bufferSize, noizLevel);
+    buffFlag == false;
+  }
+  
+  noizLevel = analogRead(0)/1024.0;
+  //these ranges need improving
+  pitchL = (16384-(analogRead(1)<<4))+32;
+  pitchF = ((64 -(analogRead(2)>>4)) - 32);
+  speedcalc = (pitchL + pitchF);
+
+  interp = analogRead(3)>>8;
+
+
+  if(speedcount >= speedcalc){
+     speedcount = doOutput(speedcalc);
+    }else {
+      speedcount++;
+    }
+
 }
 
